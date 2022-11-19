@@ -1,7 +1,7 @@
 
 public class p4 {
     public static void main(String[] args) {
-        String str = "[{]}";
+        String str = "{[()]}";
         char[] array = new char[str.length()];
         int index = 0;
         for (int i = 0; i < str.length(); i++) {
