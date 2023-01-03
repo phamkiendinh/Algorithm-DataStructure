@@ -1,5 +1,10 @@
 package Week3;
 
+/*
+ * Implement an algorithm to remove a loop from a Singly Linked List.
+ * 
+ */
+
 public class p1 {
     public static void main(String[] args) {
         Node head = new Node();

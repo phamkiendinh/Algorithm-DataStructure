@@ -1,4 +1,7 @@
-
+/*
+ * Use an adjacency matrix to represent an undirected graph. Display the labels of vertices using DFS and BFS.
+ * You can use the graph below to test your implementation (index the nodes in alphabetical order).
+ */
 public class p4 {
     public static void main(String[] args) {
         int[][] DFS = {

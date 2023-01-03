@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class Maze {
     int rows; // Maze Rows
@@ -9,22 +8,34 @@ public class Maze {
     int steps; // All explored nodes
 
     public Maze() {
+        //Maze 1
+        // rows = 4;
+        // cols = 5;
+        // map = new String[rows];
+        // map[0] = ".....";
+        // map[1] = ".   X";
+        // map[2] = ".   .";
+        // map[3] = ".....";
+        // robotRow = 2;
+        // robotCol = 1;
+        // steps = 0;
+        // Maze 2
         rows = 30;
         cols = 100;
         robotRow = 27;
         robotCol = 2;
         steps = 0;
         map = new String[rows];
-        map[0] = "....................................................................................................";
-        map[1] = ".                                              ..                                                  .";
-        map[2] = ".                                              ..                          ..                      .";
-        map[3] = ".                                              ..                          ..                      .";
-        map[4] = ".      ..............                          ..                  ...     ..                      .";
-        map[5] = ".            .............                     ..                  ...     ..   ....................";
-        map[6] = ".                                              ..                  ...     ..   ....................";
-        map[7] = ".       ....  .   .  .  .....                                                   ...     ..         .";
-        map[8] = ".       .  .  .. ..  .    .            ........                     .........   ...     ..         .";
-        map[9] = ".       ....  . . .  .    .            ........                    .........    ...     ..         .";
+         map[0] = "....................................................................................................";
+         map[1] = ".                                              ..                                              X   .";
+         map[2] = ".                                              ..                          ..                      .";
+         map[3] = ".                                              ..                          ..                      .";
+         map[4] = ".      ..............                          ..                  ...     ..                      .";
+         map[5] = ".            .............                     ..                  ...     ..   ....................";
+         map[6] = ".                                              ..                  ...     ..   ....................";
+         map[7] = ".       ....  .   .  .  .....                                                   ...     ..         .";
+         map[8] = ".       .  .  .. ..  .    .            ........                     .........   ...     ..         .";
+         map[9] = ".       ....  . . .  .    .            ........                    .........    ...     ..         .";
         map[10] = ".       ..    .   .  .    .            ........                                 ...     ..         .";
         map[11] = ".       . .   .   .  .    .        .   ........                        ..                       ....";
         map[12] = ".       .  .  .   .  .    .        .   ........                        ..                       ....";
@@ -43,7 +54,7 @@ public class Maze {
         map[25] = ".      .     .      .                        .        .                    ..                      .";
         map[26] = ".      .     .      .                        .        .                    ..                      .";
         map[27] = ".      .     .      .           .            .        .                    ..                      .";
-        map[28] = ".  X         .                  .                     .                    ..                      .";
+        map[28] = ".            .                  .                     .                    ..                      .";
         map[29] = "....................................................................................................";
     }
 
@@ -154,7 +165,7 @@ class Robot {
             // Assign the position of the robot to the current visiting queue
             maze.robotRow = frontNode.x;
             maze.robotCol = frontNode.y;
-            // Check the robot with the direction
+            // Check the robot with the direction, the node is guaranteed to be new node
             result = maze.go(frontNode.direction);
             if (result == "win") {
                 //Get the last node, aka the gate position node
@@ -172,6 +183,9 @@ class Robot {
             // Dequeue the front node
             deQueue();
             // Queueing adjacent neighbors of visiting node
+            //If the neighbors are already visited before (aka walls, spaces, out of bound), then we don't queue them
+            //Else they are new nodes that need to be explored
+
             // Queue Down
             if (map[frontNode.x + 1].charAt(frontNode.y) != '.' && visited[frontNode.x + 1][frontNode.y] == false
                     && validatePosition(frontNode.x + 1, frontNode.y)) {

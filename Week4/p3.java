@@ -1,8 +1,12 @@
 
-
+/*
+ * Convert an array of integers into a max heap. You need to implement the heapify operation for the conversion.
+ */
 public class p3 {
     public static void main(String[] args) {
         int array[] = {4,1,3,2,16,9,10,14,8,7};
+        // int[] array = {6,4,3,5,2,1};
+
 
         for (int i = array.length / 2; i >= 0; i--) {
             heapify(array, i);
@@ -31,7 +35,6 @@ public class p3 {
             int swap = arr[i];
             arr[i] = arr[largest];
             arr[largest] = swap;//swap 1 and 16
-            System.out.println("Swapping " + arr[i] + " with " + arr[largest] + "\n");
             heapify(arr, largest);//16
         }
 

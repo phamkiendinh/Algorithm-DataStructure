@@ -1,4 +1,9 @@
 package Week2;
+
+/*
+ * Given an array of positive and negative integers, find two integers in the array whose sum is closest to zero.
+ * What is the complexity of your algorithm?
+ */
 public class p4 {
     public static void main(String[] args) {
         int[] array = {-10,-5,-1,2,15,20};

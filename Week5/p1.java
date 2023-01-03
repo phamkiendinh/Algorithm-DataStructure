@@ -1,5 +1,11 @@
 import java.util.Arrays;
 import java.util.Random;
+/*
+ * Generate and store 1,000,000 random integers whose values are from 1 to 1,000,000 in an array.
+ * Sort that array using counting sort.
+ * Use the built-in sorting method provided by Java, Arrays's sort method Links to an external site., 
+ * to sort that array. Compare the running time between the two sorting algorithms.
+ */
 public class p1 {
     public static void main(String[] args) {
         Random random = new Random();

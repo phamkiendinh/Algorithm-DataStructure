@@ -1,0 +1,60 @@
+The Fibonacci sequence is defined as follows
+
+F(1) = 0
+
+F(2) = 1
+
+F(i) = F(i-1) + F(i-2), for i > 2
+
+The following algorithm is used to calculate the N-th Fibonacci number
+
+int fib(int N)
+  if N == 1
+    return 0
+  if N == 2
+    return 1
+  return fib(N-1) + Fib(N-2)
+Prove that the complexity of the above algorithm is O(2^N)
+
+Can you use dynamic programming to create a more efficient algorithm? Provide your pseudocode and analysis.
+
+Your analysis and pseudocode code for this problem must be stored in a single file Fibonacci.txt
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!Answer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Using Master Theorem
+    fib(N - 1) + fib(N - 2)
+=   (fib(N - 2) + fib(N - 3)) + (fib(N - 3) + fib(N - 5))
+= fib(N - 3) + fib(N - 5) + fib(N - 4) + fib(N - 6) +....
+
+
+At each stage, the recursion call is 2^N
+
+
+Since there are many repetition on the results, we can use a table to
+store the computed results
+
+int table[] = new int[N]
+
+for i in table:
+    table[i] = -1;
+
+public int Fibonanci(int N, int table[]) {
+    if N == 1
+        return 0
+    if N == 2
+        return 1
+    if (table[N] < 0) {
+        table[N] = fib(N - 1, table) + fib(N - 2, table)
+    }
+    return table[N];
+}
+
+
+time complexity: O(polynomial)

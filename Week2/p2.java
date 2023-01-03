@@ -1,5 +1,11 @@
 package Week2;
 
+/*
+ * Describe an algorithm that prints out all the unique elements in an array. What is the complexity of your algorithm? (Note: The Set ADT is not available).
+ * Example:
+ * Array = [6, 8, 10, 11, 6, 10] => print out [6, 8, 10, 11] (you can print the values in any order)
+ * 
+ */
 public class p2 {
     public static void main(String[] args) {
         int[] array = {6,8,10,11,6,10};

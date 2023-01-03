@@ -2,6 +2,9 @@ package Week3;
 
 import java.util.ArrayList;
 
+/*
+ * Implement the Circular Linked List data structure and use it to solve the Josephus problem Links to an external site..
+ */
 public class p2 {
     public static void main(String[] args) {
         Node head = new Node();

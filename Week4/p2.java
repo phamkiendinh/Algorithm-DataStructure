@@ -1,4 +1,8 @@
-
+/*
+ * Implement the insert operation for a BST of integers.
+ * You can insert the following values to test your implementation: 4, 2, 8, 3, 1, 7, 9, 6, 5
+ * Also, implement the search operation on the BST. Count the number of comparisons to reach an answer.
+ */
 public class p2 {
     public static void main(String[] args) {
         //Insert 4 2 8 3 1 7 9 6 5

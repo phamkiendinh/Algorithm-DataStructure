@@ -1,3 +1,7 @@
+/*
+ * Implement a method that returns the height of a binary tree.
+ */
+
 public class p1 {
     public static void main(String[] args) {
         Node root = new Node(1);

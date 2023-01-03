@@ -1,4 +1,14 @@
 
+/*
+ * Write a program that reads in a sequence of characters, 
+ * and determines whether its parentheses, brackets and curly braces are balanced.
+ * []: balanced 
+ * {}: balanced
+ * (): balanced
+ * (){{[]}}(): balanced
+ * {): not balanced
+ * {{[[}}]]: not balanced
+ */
 public class p4 {
     public static void main(String[] args) {
         String str = "{[()]}";

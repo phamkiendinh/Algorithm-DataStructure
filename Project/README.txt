@@ -12,4 +12,4 @@ Minh Vu: 4
 Jinho Ji: 4
 
 
-Video Link:
+Video Link: https://youtu.be/tnVvE8b9w5Q
